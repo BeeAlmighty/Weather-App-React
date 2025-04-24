@@ -43,7 +43,7 @@ export const WeatherData = () => {
         <Details value={`${humidity.toFixed(1)} %`} description={'Humidity'} image={<WiHumidity style={{color: 'skyblue', fontSize: '2rem'}}/>}/>
         <Details value={`${wind.toFixed(1)} m/s`} description={'Wind'} image={<GiWindSlap style={{color: 'blue', fontSize: '2rem'}}/>}/>
         <Details value={`${pressure.toFixed(1)} hpa`} description={'Pressure'} image={<GiPressureCooker style={{color: 'ed5c54', fontSize: '2rem'}}/>}/>
-        <Details value={`${windGust.toFixed(1)} m/s`} description={'Wind Gust'} image={<WiCloudyGusts style={{fontSize: '2rem', color: '0cbdee'}} />}/>
+        <Details value={`${windGust ? `${windGust} m/s` : windGust}`} description={'Wind Gust'} image={<WiCloudyGusts style={{fontSize: '2rem', color: '0cbdee'}} />}/>
       </div>
     </div>
   )
